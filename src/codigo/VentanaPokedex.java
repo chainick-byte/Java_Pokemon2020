@@ -150,7 +150,6 @@ public class VentanaPokedex extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         NombrePokemon = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
         Descripcion = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         Altura = new javax.swing.JLabel();
@@ -211,10 +210,8 @@ public class VentanaPokedex extends javax.swing.JFrame {
         Descripcion.setColumns(20);
         Descripcion.setRows(5);
         Descripcion.setOpaque(false);
-        jScrollPane1.setViewportView(Descripcion);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(270, 430, 300, 80);
+        getContentPane().add(Descripcion);
+        Descripcion.setBounds(270, 424, 300, 90);
 
         jLabel1.setText("Altura:");
         getContentPane().add(jLabel1);
@@ -271,8 +268,8 @@ public class VentanaPokedex extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        if (slide  >0) {
-            slide ++;
+        if (slide < 152) {
+            slide++;
         }
         dibujaElPokemonQueEstaEnLaPOsicion(slide);
         Pokemon p = listaPokemons.get(String.valueOf(slide + 1));
@@ -314,7 +311,7 @@ public class VentanaPokedex extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        if (slide < 152) {
+        if (slide > 0) {
             slide --;
         }
         dibujaElPokemonQueEstaEnLaPOsicion(slide);
@@ -411,6 +408,5 @@ public class VentanaPokedex extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
