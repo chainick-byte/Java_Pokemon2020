@@ -239,23 +239,23 @@ public class VentanaPokedex extends javax.swing.JFrame {
 
         jLabel5.setText("Tipos:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(410, 510, 40, 20);
+        jLabel5.setBounds(370, 510, 40, 20);
         getContentPane().add(Tipo1);
-        Tipo1.setBounds(450, 510, 56, 20);
+        Tipo1.setBounds(420, 510, 56, 20);
         getContentPane().add(Tipo2);
-        Tipo2.setBounds(510, 510, 60, 20);
+        Tipo2.setBounds(470, 510, 60, 20);
 
         jLabel6.setText("Movimientos:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(410, 540, 76, 16);
+        jLabel6.setBounds(370, 540, 76, 16);
         getContentPane().add(Movimiento1);
-        Movimiento1.setBounds(490, 540, 83, 20);
+        Movimiento1.setBounds(450, 540, 120, 20);
         getContentPane().add(Movimiento2);
-        Movimiento2.setBounds(490, 560, 83, 20);
+        Movimiento2.setBounds(450, 560, 120, 20);
         getContentPane().add(Movimiento3);
-        Movimiento3.setBounds(490, 580, 84, 20);
+        Movimiento3.setBounds(450, 580, 120, 20);
         getContentPane().add(Movimiento4);
-        Movimiento4.setBounds(490, 600, 82, 20);
+        Movimiento4.setBounds(450, 600, 120, 20);
         getContentPane().add(imagenPokemon);
         imagenPokemon.setBounds(260, 50, 320, 260);
 
