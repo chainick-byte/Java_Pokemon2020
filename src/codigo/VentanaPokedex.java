@@ -60,7 +60,7 @@ public class VentanaPokedex extends javax.swing.JFrame {
      */
     public VentanaPokedex() {
         initComponents();
-
+        setSize(950, 750);
         this.getContentPane().setBackground(Color.red);
 
         try {
@@ -132,7 +132,7 @@ public class VentanaPokedex extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(VentanaPokedex.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("sonido ha petado");
-            
+
         }
         boton.start();
 
@@ -270,12 +270,13 @@ public class VentanaPokedex extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        boton();
+
+        if (slide  >0) {
+            slide ++;
+        }
         dibujaElPokemonQueEstaEnLaPOsicion(slide);
         Pokemon p = listaPokemons.get(String.valueOf(slide + 1));
-        if (slide > 649) {
-            slide = 649;
-        }
+
         if (p != null) {
             NombrePokemon.setText(p.nombre);
             Descripcion.setLineWrap(true);
@@ -306,17 +307,19 @@ public class VentanaPokedex extends javax.swing.JFrame {
             Movimiento3.setText("...");
             Movimiento4.setText("...");
         }
-        slide++;
+     
+        boton();
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        boton();
+
+        if (slide < 152) {
+            slide --;
+        }
         dibujaElPokemonQueEstaEnLaPOsicion(slide);
         Pokemon p = listaPokemons.get(String.valueOf(slide + 1));
-        if (slide <= 0) {
-            slide = 0;
-        }
+
         if (p != null) {
             NombrePokemon.setText(p.nombre);
             Descripcion.setLineWrap(true);
@@ -346,8 +349,8 @@ public class VentanaPokedex extends javax.swing.JFrame {
             Movimiento3.setText("...");
             Movimiento4.setText("...");
         }
-        slide--;
-
+       
+        boton();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
